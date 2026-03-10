@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+  font-family: var(--font-inter), sans-serif;
+}
+
+@theme inline {
+
+  --color-primary: #8B5CF6;
+  --color-secondary: #C084FC;
+  --color-dark: #0B0618;
+  --color-card: #1A1033;
+  --color-light: #E9D5FF;
+  --color-br: #6D2EFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-border {
+  background-size: 200% 200%;
+  animation: gradientMove 2s linear infinite;
+}
